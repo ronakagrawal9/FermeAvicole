@@ -1,0 +1,49 @@
+﻿@model ItemVM
+@{
+    Layout = Model.Layout;
+}
+
+<section class="page-title" style="background-image:url(/images/background/8.jpg);">
+    <div class="auto-container">
+        <div class="inner-box">
+            <h1>Products</h1>
+            <ul class="bread-crumb">
+                <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                <li>Product</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="farmer-section">
+    <div class="auto-container">
+
+        <div class="row clearfix">
+            <div id="row">
+                @foreach (var item1 in Model.ItemList)
+                {
+                    <div class="shop-item col-md-3 col-sm-4 col-xs-11">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="@item1.Image_Path" alt="">
+                            </div>
+                            <!--lower box-->
+                            <div class="lower-box">
+                                    <h3><a href="shop-single.html">@item1.Item_Name</a></h3>
+                                    <span class="price">@item1.Item_Price</span>
+                                    <a href="@Url.Action("ProductDetails","Product",new { id = item1.Item_Id })" class="theme-btn btn-style-one"><span class="fa fa-cart-plus"></span>&ensp;View More</a>
+                                </div>
+                        </div>
+                       
+                    </div>
+                }
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+

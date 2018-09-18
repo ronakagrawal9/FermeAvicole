@@ -1,0 +1,23 @@
+﻿
+@{
+   
+    Layout = "~/Views/Shared/_AfterLoginLayout.cshtml";
+}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+            <li class="active">Order Success</li>
+        </ol>
+    </div>
+</div>
+<br /><br /><br /><br />
+<div class="container">
+    <div class="row">
+        <div class="alert alert-success" role="alert">@ViewBag.Message</div>
+    </div>
+    <br />
+   
+</div>
+<br /><br /><br /><br />

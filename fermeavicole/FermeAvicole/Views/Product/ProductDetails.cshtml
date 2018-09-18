@@ -1,0 +1,160 @@
+﻿@model ItemVM
+@{
+    Layout = Model.Layout;
+}
+
+@using (Html.BeginForm("ProductDetails", "Product", FormMethod.Post,new { @id = "frmproductdetail" }))
+{
+@Html.HiddenFor(m => m.Item_Price)
+@Html.HiddenFor(m=>m.Item_Id)
+@Html.HiddenFor(m=>m.Image_Path)
+@Html.HiddenFor(m=>m.Item_Name)
+
+ <!--Page Title-->
+<section class="page-title" style="background-image:url(/images/background/8.jpg);">
+    <div class="auto-container">
+        <div class="inner-box">
+            <h1>Products Details</h1>
+            <ul class="bread-crumb">
+                <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                <li>Products Details</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+<!--Shop Single-->
+<div class="shop-single">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!--Content Side-->
+            <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                <!--Product Details-->
+                <div class="product-details">
+
+                    <!--Basic Details-->
+                    <div class="basic-details">
+                        <div class="row clearfix">
+                            <div class="image-column col-md-5 col-sm-5 col-xs-12">
+                                <figure class="image-box"><a href="" class="lightbox-image" title="Image Caption Here"><img src="@Model.Image_Path" alt=""></a></figure>
+                            </div>
+                            <div class="info-column col-md-7 col-sm-7 col-xs-12">
+                                <div class="details-header">
+                                    <h4>@Model.Item_Name</h4>
+                                   
+                                    <div class="item-price">@Model.Item_Price</div>
+                                </div>
+                                
+                                <div class="clearfix">
+                                    <div class="item-quantity">
+                                    <div class="quantity-spinner">
+                                        <button type="button" class="minus">
+                                        <span class="fa fa-minus"></span>
+                                        </button>
+                                        @Html.TextBoxFor(m=>m.Quantity,new {@class= "prod_qty",@value="2",@name= "product" })
+                                       
+                                        <button type="button" class="plus"><span class="fa fa-plus"></span></button>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Add To Cart" class="theme-btn btn-style-one add-to-cart" > 
+                                </div>
+                                <div class="item-categories">Categories :&ensp; <a href="#">@Model.Category_Name</a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!--Basic Details-->
+                    <!--Product Info Tabs-->
+                    <div class="product-info-tabs">
+
+                        <!--Product Tabs-->
+                        <div class="prod-tabs tabs-box" id="product-tabs">
+
+                            <!--Tab Btns-->
+                            <ul class="tab-btns tab-buttons clearfix">
+                                <li data-tab="#prod-description" class="tab-btn active-btn">description</li>
+                                <li data-tab="#prod-reviews" class="tab-btn">Doctor Reports (2)</li>
+                            </ul>
+
+                            <!--Tabs Content-->
+                            <div class="tabs-container tabs-content">
+
+                                <!--Tab / Active Tab-->
+                                <div class="tab active-tab" id="prod-description">
+                                    <div class="text">@Model.Item_Description</div>
+                                        
+                                    
+                                </div>
+
+                                <!--Tab-->
+                                <div class="tab" id="prod-reviews">
+                                    <h3>Doctor Report</h3>
+
+                                    <!--Reviews Container-->
+                                    <div class="reviews-container">
+
+                              <img src="@Model.Doctor_Report_Path" height="500px" width="500px" />
+
+                             
+
+                                    </div>
+
+                                  
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--End Product Info Tabs-->
+                  
+
+                </div>
+            </div>
+            <!--End Content Side-->
+            <!--Sidebar-->
+         
+            <!--End Sidebar-->
+        </div>
+        <!--Related Products-->
+        <div class="related-products">
+            <h2>Related Products</h2>
+
+            <div class="row clearfix">
+                <!--Shop Item-->
+                @foreach (var item2 in Model.ItemList)
+                {
+                    <div class="shop-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="@item2.Image_Path" alt="">
+                                <div class="overlay-box">
+                                    <!--lower box-->
+                                    <div class="lower-box">
+                                        <h3><a href="shop-single.html">@item2.Item_Name</a></h3>
+                                        <span class="price">@item2.Item_Price</span>
+                                        <a href="@Url.Action("ProductDetails","Product",new { id = item2.Item_Id })" class="theme-btn btn-style-one"><span class="fa fa-cart-plus"></span>&ensp;View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                <!--Shop Item-->
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!--End Shop Single-->
+
+}

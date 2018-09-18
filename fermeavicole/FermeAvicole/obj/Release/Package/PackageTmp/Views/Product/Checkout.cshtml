@@ -1,0 +1,88 @@
+﻿@model ItemVM
+@{
+    Layout = Model.Layout;
+    int count = 0;
+}
+@using (Html.BeginForm("Checkout", "Product", FormMethod.Post))
+{
+    <style>
+        .product-title {
+            background: #85c977;
+            width: 553px;
+            text-align: center;
+            color: #000;
+        }
+    </style>
+    <section class="page-title" style="background-image:url(/images/background/8.jpg);">
+        <div class="auto-container">
+            <div class="inner-box">
+                <h1>Checkout</h1>
+                <ul class="bread-crumb">
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="shop-single">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+                <table class="table table-hover">
+                    <h3 class="product-title"> YOUR SHOPPING CART CONTAIN: @Model.ItemList.Count PRODUCTS </h3>
+                    <br />
+                    <br />
+                    <br />
+                    <thead style="background-color: #85c977;">
+                        <tr>
+                            <th>Sr No</th>
+                            <th>Item Image</th>
+                            <th>Quantity</th>
+                            <th>Item Name</th>
+                            <th>Unit Price</th>
+                            <th>Amount</th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+                    @foreach (var item in Model.ItemList)
+                {
+                    count++;
+                        <tr>
+                            <td>@count</td>
+                            <td><img src="@item.Image_Path" height="100px" width="100px" /></td>
+                            <td>@item.Quantity</td>
+                            <td>@item.Item_Name</td>
+                            <td>@item.Item_Price</td>
+                            <td>@item.Amount</td>
+                            <td><a href="@Url.Action("RemoveItem", "Product", new { id = item.Item_Id })">Remove</a></td>
+                        </tr>
+                    }
+
+                </table>
+
+                <div style="float:right">
+                    <h4><a href="@Url.Action("Products", "Product")">COUNTINUE TO BASKET</a></h4>
+                    <hr />
+                    <ul>
+                        @{
+
+                            foreach (var item in Model.ItemList)
+                            {
+                                <li>@item.Item_Name <i>-</i> <span style="float:right">@item.Amount</span></li>
+
+                            }
+                            <hr />
+                            <li>Total <i>-</i> <span style="float:right">@Model.Total_Amount</span></li>
+                        }
+
+                    </ul>
+                </div>
+                <br />
+                <label>Payment Mode</label> <br> <label>@Html.RadioButtonFor(m => m.Payment_Mode, "Cash")Cash</label> <br>
+                <label>@Html.RadioButtonFor(m => m.Payment_Mode, "Online")Online</label> <br>
+                <input type="submit" value="MAKE PAYMENT" />
+            </div>
+        </div>
+    </div>
+                            }

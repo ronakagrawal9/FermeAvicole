@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b08b0a5b29da49bd9b2a497b7106a227" Name="Diagram1">
+        <EntityTypeShape EntityType="FermeDBModel.CardDetail" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Category" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Complain" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Doctor" Width="1.5" PointX="6" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.DoctorReport" Width="1.5" PointX="8.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Employee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Feedback" Width="1.5" PointX="5.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Item" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Order" Width="1.5" PointX="8.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.OrderStatu" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.OrderTransaction" Width="1.5" PointX="10.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.PaymentTransaction" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.ProductionEntry" Width="1.5" PointX="8.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Purchase" Width="1.5" PointX="13" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.PurchaseCategory" Width="1.5" PointX="10.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.PurchaseItem" Width="1.5" PointX="13" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.PurchaseTransaction" Width="1.5" PointX="15.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Registration" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Role" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Stock" Width="1.5" PointX="10.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Store" Width="1.5" PointX="5.25" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FermeDBModel.Supplier" Width="1.5" PointX="10.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="FermeDBModel.FK_CardDetails_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Item_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Complain_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Complain_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_DoctorReport_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_DoctorReport_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_DoctorReport_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Feedback_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_OrderTransaction_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Stock_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Table_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Order_OrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Order_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_OrderTransaction_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Table_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_PaymentTransaction_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Table_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Purchase_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_PurchaseTransaction_Purchase" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_PurchaseItem_PurchaseCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_PurchaseItem_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Registration_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="FermeDBModel.FK_Store_Registration" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

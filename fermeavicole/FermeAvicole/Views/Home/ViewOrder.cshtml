@@ -1,0 +1,169 @@
+﻿@model FermeAvicole.ViewModel.OrderVM
+
+@{
+    Layout = "~/Views/Shared/_AfterLoginLayout.cshtml";
+}
+
+@section metatitle
+{
+    <title>View Order</title>
+}
+
+<br /><br />
+<section class="page-title" style="background-image:url(/images/background/8.jpg);">
+    <div class="auto-container">
+        <div class="inner-box">
+            <h1>View Order</h1>
+            <ul class="bread-crumb">
+                <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                <li>View Orders</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="farmer-section">
+    <div class="auto-container">
+
+        <div class="box-body">
+            <div id="page-wrapper">
+                <div cl}
+                     ass="container-fluid">
+                    <!-- Page Heading -->
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <ol class="breadcrumb">
+                                <li class="active">
+                                    <i class="fa fa-dashboard"></i> Order Details
+                                </li>
+                            </ol>
+
+                            <h2>Order Items</h2>
+                            <table class="table">
+                                <tr>
+
+
+                                    <th>
+                                        Order_Id
+                                    </th>
+
+                                    <th>
+                                        Item_Name
+                                    </th>
+
+                                    <th>
+                                        Quantity
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <th>
+                                        Total
+                                    </th>
+
+                                </tr>
+
+
+                                @foreach (var item in Model.OrderItems)
+                                {
+                                    <tr>
+
+
+                                        <td>
+                                            @Html.DisplayFor(model => item.Order_Id)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.Item_Name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.Quantity)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.Amount)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(model => item.Total)
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+
+                            <br />
+                            <br />
+                            <h2>Payment Details</h2>
+
+                            <table class="table">
+                                <tr>
+
+
+                                    <th>
+                                        Transaction Id
+                                    </th>
+
+                                    <th>
+                                        Transaction Date
+                                    </th>
+
+                                    <th>
+                                        Order Number
+                                    </th>
+
+                                    <th>
+                                        Customer Name
+                                    </th>
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <th>
+                                        Payment Mode
+                                    </th>
+
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td>
+                                        @Model.PaymentTransaction.PaymentTransaction_Id
+                                    </td>
+                                    <td>
+                                        @Model.PaymentTransaction.Date
+                                    </td>
+                                    <td>
+                                        @Model.PaymentTransaction.Order_Id
+
+                                    </td>
+                                    <td>
+                                        @Model.PaymentTransaction.User_Id
+                                    </td>
+
+                                    <td>
+                                        @Model.PaymentTransaction.Amount
+                                    </td>
+                                    <td>
+                                        @Model.PaymentTransaction.Payment_Mode
+                                    </td>
+
+                                </tr>
+
+
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+        </div>
+
+
+
+    </div>
+</section>

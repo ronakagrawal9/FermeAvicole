@@ -1,0 +1,169 @@
+﻿@model FermeAvicole.ViewModel.RegistrationVM
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Register", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+                <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+                <li class="active">Create Account</li>
+            </ol>
+        </div>
+    </div>
+    <!-- //breadcrumbs -->
+
+        <div class="container">
+
+            <div class="page-header text-center">
+                <h2>Create Account</h2>
+            </div>
+        </div>
+
+
+        <div class="container">
+           <div class="row">
+               <div class="col-md-2">
+
+               </div>
+               <div class="col-md-8">
+                   <div class="panel panel-default">
+                       <div class="panel-body">
+
+                           <div class="form-horizontal">
+                               <div class="row">
+
+                                   <div class="col-md-12">
+
+                                       <div class="panel panel-default">
+                                           <div class="panel-heading">
+                                               <h3 class="panel-title">PROFILE INFORMATION</h3>
+                                           </div>
+                                           <div class="panel-body">
+                                               <div class="form-group">
+                                                   @Html.LabelFor(model => model.ImageFile, htmlAttributes: new { @class = "control-label col-md-4" })
+                                                   <div class="col-md-8">
+                                                       @Html.TextBoxFor(model => model.ImageFile, new { type = "file", @class = "form-control" })
+                                                       @Html.ValidationMessageFor(model => model.ImageFile, "", new { @class = "text-danger" })
+                                                   </div>
+                                               </div>
+                                             
+
+
+
+                                               <div class="form-group">
+                                                   @Html.LabelFor(model => model.First_Name, new { @class = "control-label col-md-4" })
+                                                   <div class="col-md-8">
+                                                       @Html.TextBoxFor(model => model.First_Name, new { @class = "form-control" } )
+                                                       @Html.ValidationMessageFor(model => model.First_Name, "", new { @class = "text-danger" })
+                                                   </div>
+                                               </div>
+
+                                               <div class="form-group">
+                                                   @Html.LabelFor(model => model.Last_Name, new { @class = "control-label col-md-4" })
+                                                   <div class="col-md-8">
+                                                       @Html.TextBoxFor(model => model.Last_Name,new { @class = "form-control" } )
+                                                       @Html.ValidationMessageFor(model => model.Last_Name, "", new { @class = "text-danger" })
+                                                   </div>
+                                               </div>
+                                              
+
+                                               <div class="form-group">
+                                                   @Html.LabelFor(model => model.Address,new { @class = "control-label col-md-4" })
+                                                   <div class="col-md-8">
+                                                       @Html.TextAreaFor(model => model.Address, new {@rows=4, @class = "form-control" } )
+                                                       @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                                                   </div>
+                                               </div>
+                                               <div class="form-group">
+                                                   @Html.LabelFor(model => model.PinCode, new { @class = "control-label col-md-4" })
+                                                   <div class="col-md-8">
+                                                       @Html.TextBoxFor(model => model.PinCode, new  { @class = "form-control" })
+                                                       @Html.ValidationMessageFor(model => model.PinCode, "", new { @class = "text-danger" })
+                                                   </div>
+                                               </div>
+
+                                               <div class="form-group">
+                                                   @Html.LabelFor(model => model.Contact_Number, new { @class = "control-label col-md-4" })
+                                                   <div class="col-md-8">
+                                                       @Html.TextBoxFor(model => model.Contact_Number, new { @class = "form-control" } )
+                                                       @Html.ValidationMessageFor(model => model.Contact_Number, "", new { @class = "text-danger" })
+                                                   </div>
+                                               </div>
+
+
+
+                                           </div>
+                                       </div>
+
+                                   </div>
+
+
+                               </div>
+                               <div class="row">
+                                   <div class="col-md-12">
+                                       <div class="panel panel-default">
+                                           <div class="panel-heading">
+                                               <h3 class="panel-title">LOGIN INFORMATION</h3>
+                                           </div>
+                                           <div class="panel-body">
+                                               <div class="form-group">
+                                                   @Html.LabelFor(model => model.Email_Id, new { @class = "control-label col-md-4" })
+                                                   <div class="col-md-8">
+                                                       @Html.TextBoxFor(model => model.Email_Id, new { @class = "form-control" })
+                                                       @Html.ValidationMessageFor(model => model.Email_Id, "", new { @class = "text-danger" })
+                                                        
+</div>
+                                               </div>
+
+
+                                               <div class="form-group">
+                                                   @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-4" })
+                                                   <div class="col-md-8">
+                                                       @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                                                       @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                                   </div>
+                                               </div>
+
+                                               <div class="form-group">
+                                                   <div class="col-md-offset-4 col-md-8">
+                                                       <input type="submit" value="Register" class="btn btn-default" />
+                                                   </div>
+                                               </div>
+
+                                           </div>
+                                       </div>
+
+
+
+
+
+
+                                   </div>
+                               </div>
+                               
+                           </div>
+
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-2">
+
+               </div>
+           </div>
+               
+
+          
+
+            
+        </div>
+
+
+}
+

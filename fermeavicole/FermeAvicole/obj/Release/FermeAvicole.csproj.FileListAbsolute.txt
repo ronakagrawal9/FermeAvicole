@@ -1,0 +1,74 @@
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\csc.exe
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\System.Collections.Immutable.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\System.Reflection.Metadata.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\vbc.exe
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\VBCSCompiler.exe
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\roslyn\VBCSCompiler.exe.config
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\FermeAvicole.dll.config
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\FermeAvicole.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\FermeAvicole.pdb
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\EntityFramework.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\EntityFramework.SqlServer.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\Microsoft.Web.Infrastructure.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Helpers.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Mvc.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Razor.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.Deployment.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.Razor.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\EntityFramework.xml
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\EntityFramework.SqlServer.xml
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Razor.xml
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.xml
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.Deployment.xml
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.Razor.xml
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Helpers.xml
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\bin\System.Web.Mvc.xml
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\obj\Release\FermeAvicole.dll
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\obj\Release\FermeAvicole.pdb
+D:\FERME AVICOLE\FermeAvicole\FermeAvicole\obj\Release\FermeAvicole.csprojResolveAssemblyReference.cache
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\csc.exe
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\System.Collections.Immutable.dll
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\System.Reflection.Metadata.dll
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\vbc.exe
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\VBCSCompiler.exe
+D:\11\FermeAvicole\FermeAvicole\bin\roslyn\VBCSCompiler.exe.config
+D:\11\FermeAvicole\FermeAvicole\bin\FermeAvicole.dll.config
+D:\11\FermeAvicole\FermeAvicole\bin\FermeAvicole.dll
+D:\11\FermeAvicole\FermeAvicole\bin\FermeAvicole.pdb
+D:\11\FermeAvicole\FermeAvicole\bin\EntityFramework.dll
+D:\11\FermeAvicole\FermeAvicole\bin\EntityFramework.SqlServer.dll
+D:\11\FermeAvicole\FermeAvicole\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\11\FermeAvicole\FermeAvicole\bin\Microsoft.Web.Infrastructure.dll
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Helpers.dll
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Mvc.dll
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Razor.dll
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.Deployment.dll
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.dll
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.Razor.dll
+D:\11\FermeAvicole\FermeAvicole\bin\EntityFramework.xml
+D:\11\FermeAvicole\FermeAvicole\bin\EntityFramework.SqlServer.xml
+D:\11\FermeAvicole\FermeAvicole\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Razor.xml
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.xml
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.Deployment.xml
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Webpages.Razor.xml
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Helpers.xml
+D:\11\FermeAvicole\FermeAvicole\bin\System.Web.Mvc.xml
+D:\11\FermeAvicole\FermeAvicole\obj\Release\FermeAvicole.csprojResolveAssemblyReference.cache
+D:\11\FermeAvicole\FermeAvicole\obj\Release\FermeAvicole.dll
+D:\11\FermeAvicole\FermeAvicole\obj\Release\FermeAvicole.pdb

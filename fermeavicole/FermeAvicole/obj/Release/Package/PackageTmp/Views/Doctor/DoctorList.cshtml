@@ -1,0 +1,102 @@
+﻿@model IEnumerable<FermeAvicole.ViewModel.DoctorVM>
+
+@{
+    ViewBag.Title = "DoctorList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section metatitle
+{
+    <title> Doctor List</title>
+}
+
+<!-- Main content -->
+
+
+
+<div class="content-wrapper">
+
+    <section class="content">
+        <!-- Defualt box -->
+        <div class="box">
+            <div class="box-header with-border">
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="box-body">
+                    
+                </div>
+                <!-- /box body -->
+                <section class="content-header">
+                    <h1>
+                        DoctorList
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Home </a></li>
+                        <li class="active">Doctorlist</li>
+                    </ol>
+                </section>
+                <section class="content">
+                    <p>
+                        @Html.ActionLink("Create New", "Create")
+                    </p>
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Docter_id)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Doctor_Name)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Contact_Number)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Email_Id)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Address)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Docter_id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Doctor_Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Contact_Number)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email_Id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Address)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.Docter_id }) |
+
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Docter_id })
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+
+                </section>
+            </div>
+        </div>
+    </section>
+</div>

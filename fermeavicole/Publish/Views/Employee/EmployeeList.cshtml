@@ -1,0 +1,114 @@
+﻿@model IEnumerable<EmployeeVM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section metatitle
+{
+    <title> Employee List</title>
+}
+
+
+
+<div class="content-wrapper">
+   
+
+    <section class="content">
+        <!-- Defualt box -->
+        <div class="box">
+            <div class="box-header with-border">
+               
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="box-body">
+                    <section class="content-header">
+                        <h1>
+                            Employee List
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li><a href="#"><i class="fa fa-dashboard"></i> Home </a></li>
+                            <li class="active">Employee List</li>
+                        </ol>
+                    </section>
+                    <section class="content">
+
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>        
+           
+
+            <th>
+                First Name
+            </th>
+            <th>
+               Last Name
+            </th>
+            <th>
+               Role Name
+            </th>
+            <th>
+               Email Id
+            </th>
+            <th>
+              Contact Number
+            </th>
+            <th>
+             Employee Image
+            </th>
+          
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.First_Name
+                </td>
+                <td>
+                    @item.Last_Name
+                </td>
+                <td>
+                    @item.Role_Name
+                </td>
+                <td>
+                    @item.Email_Id
+                </td>
+               
+                <td>
+                    @item.Contact_Number
+                </td>
+                <td>
+                   <img src="@item.Image_Path" height="100px" width="100px" />
+                </td>
+             
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Employee_Id }) |
+
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Employee_Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</section>
+                </div>
+                <!-- /box body -->
+               
+            </div>
+        </div>
+    </section>
+</div>

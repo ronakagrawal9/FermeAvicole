@@ -1,0 +1,64 @@
+﻿@model ItemVM
+@{
+    ViewBag.Title = "MakePaymentCash";
+    Layout = "~/Views/Shared/_AfterLoginLayout.cshtml";
+    int count = 0;
+}
+@using (Html.BeginForm("MakePaymentCash", "Product", FormMethod.Post))
+{
+        @Html.HiddenFor(m => m.Total_Amount)
+    <br />
+    <section class="page-title" style="background-image:url(/images/background/8.jpg);">
+        <div class="auto-container">
+            <div class="inner-box">
+                <h1>MakePaymentCash</h1>
+                <ul class="bread-crumb">
+                    <li><a href="@Url.Action("Checkout", "Home")">Payment</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="shop-single">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+                <table class="table">
+                    <thead> 
+                    <h3> YOUR SHOPPING CART CONTAIN: @Model.ItemList.Count PRODUCTS </h3> </thead>
+                    <br />
+                    <br />
+                    <br />
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Item Image</th>
+                        <th>Quantity</th>
+                        <th>Item Name</th>
+                        <th>Unit Price</th>
+                        <th>Amount</th>
+                        <th></th>
+
+                    </tr>
+                    @foreach (var item in Model.ItemList)
+                {
+                    count++;
+                        <tr>
+                            <td>@count</td>
+                            <td><img src="@item.Image_Path" height="100px" width="100px" /></td>
+                            <td>@item.Quantity</td>
+                            <td>@item.Item_Name</td>
+                            <td>@item.Item_Price</td>
+                            <td>@item.Amount</td>
+                            <td><a href="@Url.Action("RemoveItem", "Product", new { id = item.Item_Id })">Remove</a></td>
+                        </tr>
+                    }
+
+                </table>
+
+
+                <label>Total Amount</label> <br> <label>@Model.Total_Amount</label><br><br><br>
+            </div>
+        </div>
+        </div>
+
+        }

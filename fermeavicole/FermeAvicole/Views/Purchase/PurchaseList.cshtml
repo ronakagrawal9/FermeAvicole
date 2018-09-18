@@ -1,0 +1,108 @@
+﻿@model IEnumerable<FermeAvicole.ViewModel.PurchaseVM>
+
+@{
+    ViewBag.Title = "PurchaseList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@section metatitle
+{
+    <title>Purchase List</title>
+}
+ 
+<div class="content-wrapper">
+
+    <section class="content">
+        <!-- Defualt box -->
+        <div class="box">
+            <div class="box-header with-border">
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="box-body">
+                    <div id="page-wrapper">
+                        <div class="container-fluid">
+                            <!-- Page Heading -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h1 class="page-header">
+                                        Purchase List
+                                    </h1>
+                                    <ol class="breadcrumb">
+                                        <li class="active">
+                                            <i class="fa fa-dashboard"></i> Purchase List
+                                        </li>
+                                    </ol>
+                                    <p>
+                                        @Html.ActionLink("Create New", "Create")
+                                    </p>
+                                    <table class="table">
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Supplier_Name)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.PurchaseItem.Item_Name)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.PurchaseItem.Quantity)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.PurchaseItem.Price)
+                                            </th>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Total_amount)
+                                            </th>
+
+                                        </tr>
+
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Supplier_Name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PurchaseItem.Item_Name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PurchaseItem.Quantity)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PurchaseItem.Price)
+                                                </td>
+
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Total_amount)
+                                                </td>
+
+                                            </tr>
+                                        }
+
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- /.container-fluid -->
+                    </div>
+                </div>
+                <!-- /box body -->
+
+
+            </div>
+        </div>
+    </section>
+</div>
